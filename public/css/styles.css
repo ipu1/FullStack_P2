@@ -6,7 +6,7 @@ body, h1, h2, h3, p, ul, li, form, input, button {
     font-family: 'Frutiger', sans-serif;
 }
 
-/* Center everything vertically and horizontally */
+/* Center everything horizontally and vertically */
 body {
     display: flex;
     justify-content: center;
@@ -18,13 +18,10 @@ body {
 }
 
 .container {
-    display: flex;
-    flex-direction: column; /* Arrange items from top to bottom */
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
     max-width: 600px;
     width: 100%;
     padding: 20px;
+    text-align: center; /* Center content horizontally */
 }
 
 /* Heading styles */
@@ -37,6 +34,7 @@ h1, h2, h3 {
 /* Form styles */
 form {
     margin-bottom: 20px;
+    text-align: left; /* Reset text alignment */
 }
 
 label {
@@ -69,6 +67,7 @@ button:hover {
 /* List styles */
 ul {
     list-style-type: none;
+    text-align: left; /* Reset text alignment */
 }
 
 li {
