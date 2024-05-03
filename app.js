@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const itemRoutes = require('./api/routes/itemRoutes');
+const songRoutes = require('./api/routes/songRoutes'); // Import songRoutes.js
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/myapp', {
+mongoose.connect('mongodb+srv://myAtlas-001:1234@cluster0.uhslgbg.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -21,7 +21,7 @@ db.once('open', () => {
 });
 
 // Routes
-app.use('/api', itemRoutes);
+app.use('/api/songs', songRoutes); // Use songRoutes for /api/songs
 
 // Start server
 app.listen(PORT, () => {
