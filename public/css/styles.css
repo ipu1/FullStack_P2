@@ -6,7 +6,7 @@ body, h1, h2, h3, p, ul, li, form, input, button {
     font-family: 'Frutiger', sans-serif;
 }
 
-/* Center everything */
+/* Center everything vertically */
 body {
     display: flex;
     justify-content: center;
@@ -15,12 +15,16 @@ body {
     background: linear-gradient(136deg, #c566ff, #925fb1, #4d1f7a);
     background-size: 600% 600%;
     animation: AnimationName 6s ease infinite;
+    position: relative;
 }
 
 .container {
     max-width: 600px;
     width: 100%;
     padding: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* Heading styles */
