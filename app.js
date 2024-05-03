@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const songRoutes = require('./api/routes/songRoutes'); // Import songRoutes.js
+const path = require('path'); // Import the path module
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -26,7 +27,7 @@ app.use('/api/songs', songRoutes); // Use songRoutes for /api/songs
 
 //Root router
 app.get('/', (req, res) => {
-    res.send('Welcome to the Music API');
+    res.sendFile(path.join(__dirname, 'public', 'index.html')); // Serve index.html
 });
 
 // Start server
