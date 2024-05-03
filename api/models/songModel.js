@@ -11,6 +11,6 @@ const songSchema = new mongoose.Schema({
   releaseYear: Number
 });
 
-const Song = mongoose.model('Song', songSchema);
+const Song = mongoose.model('Song', songSchema, 'songs'); // 'songs' specifies the collection name
 
 module.exports = Song;
