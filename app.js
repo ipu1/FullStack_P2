@@ -29,7 +29,7 @@ app.use('/api/songs', songRoutes); // Use songRoutes for /api/songs
 
 //Root router
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname,'index.html')); // Serve index.html
+    res.sendFile(path.join(__dirname, 'public', 'index.html')); // Serve index.html
 });
 
 // Start server
