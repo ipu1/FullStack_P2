@@ -10,7 +10,6 @@ body, h1, h2, h3, p, ul, li, form, input, button {
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
     min-height: 100vh;
     background: linear-gradient(136deg, #c566ff, #925fb1, #4d1f7a);
     background-size: 600% 600%;
