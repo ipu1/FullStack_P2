@@ -23,6 +23,12 @@ db.once('open', () => {
 // Routes
 app.use('/api/songs', songRoutes); // Use songRoutes for /api/songs
 
+
+//Root router
+app.get('/', (req, res) => {
+    res.send('Welcome to the Music API');
+});
+
 // Start server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
