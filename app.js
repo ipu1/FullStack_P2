@@ -23,6 +23,9 @@ db.once('open', () => {
   console.log('Connected to MongoDB');
 });
 
+// Serve static files from the public directory
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Routes
 app.use('/api/songs', songRoutes); // Use songRoutes for /api/songs
 
